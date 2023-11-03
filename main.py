@@ -11,4 +11,9 @@ def play(data):
         print(f"Compare A: {choice_a['name']}, a {choice_a['description']}, from {choice_a['country']}")
         return choice_a['follower_count']
     followers_a = celebritie_a(data)
+    def celebritie_b(data):
+        choice_b = choice(data)
+        print(f"Compare B: {choice_b['name']}, a {choice_b['description']}, from {choice_b['country']}")
+        return choice_b['follower_count']
+    followers_b = celebritie_b(data)
 play(data)
