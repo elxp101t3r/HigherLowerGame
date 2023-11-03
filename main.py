@@ -11,9 +11,25 @@ def play(data):
         print(f"Compare A: {choice_a['name']}, a {choice_a['description']}, from {choice_a['country']}")
         return choice_a['follower_count']
     followers_a = celebritie_a(data)
+    
     def celebritie_b(data):
         choice_b = choice(data)
         print(f"Compare B: {choice_b['name']}, a {choice_b['description']}, from {choice_b['country']}")
         return choice_b['follower_count']
     followers_b = celebritie_b(data)
+    
+    def comparison(followers_a,followers_b):
+        global final_score
+        user_choice = input('Who has more followers? "A" or "B"?')
+        if user_choice == 'A':
+            if followers_a > followers_b:
+                final_score += 1
+                os.system('clear')
+                print(logo)
+                print(f"You are right! Final score: {final_score}")
+            elif followers_a < followers_b:
+                os.system('clear')
+                print(logo)
+                print(f"Sorry, you are wrong. Final score: {final_score}")
+        
 play(data)
