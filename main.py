@@ -42,5 +42,11 @@ def play(data):
                 print(logo)
                 print(f"Sorry, you are wrong. Final score: {final_score}")
     comparison(followers_a=followers_a, followers_b=followers_b)
-    
-play(data)
+ 
+print(logo)
+continue_play = True
+while continue_play: 
+    f = final_score  
+    play(data)
+    if f == final_score:
+        break
